@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #181818;
+}
+.lightMode {
+  background-color: #fff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.buttonContainer {
+  position: absolute;
+  top: 50px;
+}
+.button {
+  padding: 15px;
+  width: 250px;
+  border: 0;
+  background-color: #fff;
+  color: #000;
+}
+.clockContainer {
+  height: 300px;
+  width: 300px;
+  border: 5px solid rgb(255, 196, 0);
+  box-shadow: 0 0 10px rgb(255, 196, 0);
+  border-radius: 50%;
+  background-image: url(./image/analogWatchImage.jpg);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.clockContainer::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 4;
+}
+.secondCounter {
+  height: 160px;
+  width: 160px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  transform: rotateZ(0deg);
+}
+.secondCounter::before {
+  content: "";
+  background-color: rgb(255, 136, 0);
+  height: 110px;
+  width: 2px;
+  z-index: 3;
+}
+.minuteCounter {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  transform: rotateZ(0deg);
+}
+.minuteCounter::before {
+  content: "";
+  background-color: rgb(153, 31, 31);
+  height: 97.5px;
+  width: 3.5px;
+  z-index: 2;
+}
+.hourCounter {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  transform: rotateZ(0deg);
+}
+.hourCounter::before {
+  content: "";
+  background-color: rgb(50, 155, 173);
+  height: 80px;
+  width: 4.1px;
+  z-index: 1;
+}
